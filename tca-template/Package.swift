@@ -5,36 +5,51 @@ import PackageDescription
 let package = Package(
   name: "tca-template",
   platforms: [
-    .iOS(.v13),
-    .macOS(.v10_15),
-    .tvOS(.v13),
-    .watchOS(.v6),
+    .iOS(.v15),
+    .macOS(.v12),
+    .tvOS(.v15),
+    .watchOS(.v8),
   ],
   products: [
+    // MARK: - Core Application
     .library(name: "AppCore", targets: ["AppCore"]),
     .library(name: "AppSwiftUI", targets: ["AppSwiftUI"]),
+
+    // MARK: - Authentication
     .library(name: "AuthenticationClient", targets: ["AuthenticationClient"]),
     .library(name: "AuthenticationClientLive", targets: ["AuthenticationClientLive"]),
-    .library(name: "GameCore", targets: ["GameCore"]),
-    .library(name: "GameSwiftUI", targets: ["GameSwiftUI"]),
     .library(name: "LoginCore", targets: ["LoginCore"]),
     .library(name: "LoginSwiftUI", targets: ["LoginSwiftUI"]),
-    .library(name: "NewGameCore", targets: ["NewGameCore"]),
-    .library(name: "NewGameSwiftUI", targets: ["NewGameSwiftUI"]),
     .library(name: "TwoFactorCore", targets: ["TwoFactorCore"]),
     .library(name: "TwoFactorSwiftUI", targets: ["TwoFactorSwiftUI"]),
+
+    // MARK: - Common Modules
+    .library(name: "CommonUI", targets: ["CommonUI"]),
+    .library(name: "NetworkClient", targets: ["NetworkClient"]),
+    .library(name: "NetworkClientLive", targets: ["NetworkClientLive"]),
+
+    // MARK: - Feature Examples (Remove when creating new app)
+    .library(name: "HomeCore", targets: ["HomeCore"]),
+    .library(name: "HomeSwiftUI", targets: ["HomeSwiftUI"]),
+    .library(name: "ProfileCore", targets: ["ProfileCore"]),
+    .library(name: "ProfileSwiftUI", targets: ["ProfileSwiftUI"]),
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.15.0"),
     .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
+    // Add other common dependencies here as needed
+    // .package(url: "https://github.com/Alamofire/Alamofire", from: "5.0.0"),
+    // .package(url: "https://github.com/onevcat/Kingfisher", from: "7.0.0"),
   ],
   targets: [
+    // MARK: - Core Application
     .target(
       name: "AppCore",
       dependencies: [
         "AuthenticationClient",
         "LoginCore",
-        "NewGameCore",
+        "HomeCore",
+        "ProfileCore",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
@@ -46,11 +61,14 @@ let package = Package(
       name: "AppSwiftUI",
       dependencies: [
         "AppCore",
+        "CommonUI",
         "LoginSwiftUI",
-        "NewGameSwiftUI",
+        "HomeSwiftUI",
+        "ProfileSwiftUI",
       ]
     ),
 
+    // MARK: - Authentication
     .target(
       name: "AuthenticationClient",
       dependencies: [
@@ -60,22 +78,29 @@ let package = Package(
     ),
     .target(
       name: "AuthenticationClientLive",
-      dependencies: ["AuthenticationClient"]
+      dependencies: [
+        "AuthenticationClient",
+        "NetworkClient",
+      ]
     ),
 
+    // MARK: - Common Modules
     .target(
-      name: "GameCore",
+      name: "CommonUI",
       dependencies: [
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
       ]
     ),
-    .testTarget(
-      name: "GameCoreTests",
-      dependencies: ["GameCore"]
+    .target(
+      name: "NetworkClient",
+      dependencies: [
+        .product(name: "Dependencies", package: "swift-dependencies"),
+        .product(name: "DependenciesMacros", package: "swift-dependencies"),
+      ]
     ),
     .target(
-      name: "GameSwiftUI",
-      dependencies: ["GameCore"]
+      name: "NetworkClientLive",
+      dependencies: ["NetworkClient"]
     ),
 
     .target(
@@ -94,26 +119,47 @@ let package = Package(
       name: "LoginSwiftUI",
       dependencies: [
         "LoginCore",
+        "CommonUI",
         "TwoFactorSwiftUI",
       ]
     ),
 
+    // MARK: - Feature Examples (Replace with your own features)
     .target(
-      name: "NewGameCore",
+      name: "HomeCore",
       dependencies: [
-        "GameCore",
+        "NetworkClient",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
     .testTarget(
-      name: "NewGameCoreTests",
-      dependencies: ["NewGameCore"]
+      name: "HomeCoreTests",
+      dependencies: ["HomeCore"]
     ),
     .target(
-      name: "NewGameSwiftUI",
+      name: "HomeSwiftUI",
       dependencies: [
-        "GameSwiftUI",
-        "NewGameCore",
+        "HomeCore",
+        "CommonUI",
+      ]
+    ),
+
+    .target(
+      name: "ProfileCore",
+      dependencies: [
+        "AuthenticationClient",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+      ]
+    ),
+    .testTarget(
+      name: "ProfileCoreTests",
+      dependencies: ["ProfileCore"]
+    ),
+    .target(
+      name: "ProfileSwiftUI",
+      dependencies: [
+        "ProfileCore",
+        "CommonUI",
       ]
     ),
 
@@ -130,7 +176,10 @@ let package = Package(
     ),
     .target(
       name: "TwoFactorSwiftUI",
-      dependencies: ["TwoFactorCore"]
+      dependencies: [
+        "TwoFactorCore",
+        "CommonUI",
+      ]
     ),
   ],
   swiftLanguageModes: [.v6]
