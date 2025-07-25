@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "tic-tac-toe",
+  name: "tca-template",
   platforms: [
     .iOS(.v13),
     .macOS(.v10_15),
