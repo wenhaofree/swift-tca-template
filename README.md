@@ -217,6 +217,7 @@ Effect ←←←←←←←←←←←←←←←←←←←←←←←
 | `rename-project.sh` | Rename entire project | `./Scripts/rename-project.sh NewName` |
 | `setup-dev.sh` | Setup development environment | `./Scripts/setup-dev.sh` |
 | `run-tests.sh` | Run test suite | `./Scripts/run-tests.sh` |
+| `check-gitignore.sh` | Validate .gitignore configuration | `./Scripts/check-gitignore.sh` |
 
 ## 📚 Documentation
 

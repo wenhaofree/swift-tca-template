@@ -1,9 +1,159 @@
-.DS_Store
-.build
-.swiftpm
-/Packages
-/*.swiftinterface
-/*.xcodeproj
+# Xcode
 xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+.swiftpm/
+.build/
+*.swiftinterface
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Accio
+Dependencies/
+.accio/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+iOSInjectionProject/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Documentation
 .docc-build/
+
+# Augment
 .augment/rules
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Backup files
+*.bak
+*.backup
+*~.nib
+
+# Test results
+test-results/
+*.gcov
+*.gcda
+*.gcno
+coverage/
+*.coverage
+*.coveragexml
+*.profdata
+simulator_logs/
+
+# Firebase
+GoogleService-Info.plist
+google-services.json
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# API keys and secrets
+secrets.plist
+config.plist
+APIKeys.plist
+
+# Certificates and provisioning profiles
+*.p12
+*.mobileprovision
+*.provisionprofile
+AuthKey_*.p8
+
+# Localization
+*.strings~
+
+# Generated files
+Generated/
+*.generated.swift
+R.generated.swift
+swiftgen.yml
+
+# Package managers
+.mint/
+vendor/
+Gemfile.lock
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.ipynb_checkpoints
