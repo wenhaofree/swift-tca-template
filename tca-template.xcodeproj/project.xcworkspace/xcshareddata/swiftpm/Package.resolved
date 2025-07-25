@@ -1,5 +1,5 @@
 {
-  "originHash" : "47143aae6e437978c0a601063097fd41c408085614fb5fdefd3aa92015c460e0",
+  "originHash" : "9064b0eeaf4957621a1481cb07bb695ef7447e5f37acf6e625d2f8b582d1d1e7",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -88,7 +88,7 @@
       "location" : "https://github.com/pointfreeco/swift-navigation",
       "state" : {
         "revision" : "ae208d1a5cf33aee1d43734ea780a09ada6e2a21",
-        "version" : "2.3.2"
+        "version" : "2.3.1"
       }
     },
     {
