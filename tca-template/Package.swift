@@ -35,8 +35,8 @@ let package = Package(
     .library(name: "ProfileSwiftUI", targets: ["ProfileSwiftUI"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.15.0"),
-    .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.0.0"),
+    .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.20.2"),
+    .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.9.2"),
     // Add other common dependencies here as needed
     // .package(url: "https://github.com/Alamofire/Alamofire", from: "5.0.0"),
     // .package(url: "https://github.com/onevcat/Kingfisher", from: "7.0.0"),
