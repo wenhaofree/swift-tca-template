@@ -37,9 +37,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.20.2"),
     .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.9.2"),
-    // Add other common dependencies here as needed
-    // .package(url: "https://github.com/Alamofire/Alamofire", from: "5.0.0"),
-    // .package(url: "https://github.com/onevcat/Kingfisher", from: "7.0.0"),
+    .package(url: "https://github.com/pointfreeco/swift-perception", from: "1.6.0"),
   ],
   targets: [
     // MARK: - Core Application
@@ -51,6 +49,7 @@ let package = Package(
         "HomeCore",
         "ProfileCore",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+        .product(name: "Perception", package: "swift-perception"),
       ]
     ),
     .testTarget(
@@ -74,6 +73,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "DependenciesMacros", package: "swift-dependencies"),
+        .product(name: "Perception", package: "swift-perception"),
       ]
     ),
     .target(
@@ -88,7 +88,8 @@ let package = Package(
     .target(
       name: "CommonUI",
       dependencies: [
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+        .product(name: "Perception", package: "swift-perception"),
       ]
     ),
     .target(
@@ -96,6 +97,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "DependenciesMacros", package: "swift-dependencies"),
+        .product(name: "Perception", package: "swift-perception"),
       ]
     ),
     .target(
@@ -109,6 +111,7 @@ let package = Package(
         "AuthenticationClient",
         "TwoFactorCore",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+        .product(name: "Perception", package: "swift-perception"),
       ]
     ),
     .testTarget(
@@ -130,6 +133,7 @@ let package = Package(
       dependencies: [
         "NetworkClient",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+        .product(name: "Perception", package: "swift-perception"),
       ]
     ),
     .testTarget(
@@ -149,6 +153,7 @@ let package = Package(
       dependencies: [
         "AuthenticationClient",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+        .product(name: "Perception", package: "swift-perception"),
       ]
     ),
     .testTarget(
@@ -168,6 +173,7 @@ let package = Package(
       dependencies: [
         "AuthenticationClient",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+        .product(name: "Perception", package: "swift-perception"),
       ]
     ),
     .testTarget(
