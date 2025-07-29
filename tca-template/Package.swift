@@ -51,9 +51,11 @@ let package = Package(
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
       ],
-      swiftSettings: [
-        .enableExperimentalFeature("StrictConcurrency")
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
+
     ),
     .testTarget(
       name: "AppCoreTests",
@@ -67,6 +69,10 @@ let package = Package(
         "LoginSwiftUI",
         "HomeSwiftUI",
         "ProfileSwiftUI",
+      ],
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
 
@@ -78,8 +84,9 @@ let package = Package(
         .product(name: "DependenciesMacros", package: "swift-dependencies"),
         .product(name: "Perception", package: "swift-perception"),
       ],
-      swiftSettings: [
-        .enableExperimentalFeature("StrictConcurrency")
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
     .target(
@@ -87,6 +94,10 @@ let package = Package(
       dependencies: [
         "AuthenticationClient",
         "NetworkClient",
+      ],
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
 
@@ -96,6 +107,10 @@ let package = Package(
       dependencies: [
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
+      ],
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
     .target(
@@ -105,8 +120,9 @@ let package = Package(
         .product(name: "DependenciesMacros", package: "swift-dependencies"),
         .product(name: "Perception", package: "swift-perception"),
       ],
-      swiftSettings: [
-        .enableExperimentalFeature("StrictConcurrency")
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
     .target(
@@ -122,8 +138,9 @@ let package = Package(
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
       ],
-      swiftSettings: [
-        .enableExperimentalFeature("StrictConcurrency")
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
     .testTarget(
@@ -136,6 +153,10 @@ let package = Package(
         "LoginCore",
         "CommonUI",
         "TwoFactorSwiftUI",
+      ],
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
 
@@ -147,8 +168,9 @@ let package = Package(
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
       ],
-      swiftSettings: [
-        .enableExperimentalFeature("StrictConcurrency")
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
     .testTarget(
@@ -160,6 +182,10 @@ let package = Package(
       dependencies: [
         "HomeCore",
         "CommonUI",
+      ],
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
 
@@ -170,8 +196,9 @@ let package = Package(
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
       ],
-      swiftSettings: [
-        .enableExperimentalFeature("StrictConcurrency")
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
     .testTarget(
@@ -183,6 +210,10 @@ let package = Package(
       dependencies: [
         "ProfileCore",
         "CommonUI",
+      ],
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
 
@@ -193,8 +224,9 @@ let package = Package(
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
       ],
-      swiftSettings: [
-        .enableExperimentalFeature("StrictConcurrency")
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
     .testTarget(
@@ -206,6 +238,10 @@ let package = Package(
       dependencies: [
         "TwoFactorCore",
         "CommonUI",
+      ],
+      plugins: [
+        .plugin(name: "DependenciesMacrosPlugin", package: "swift-dependencies"),
+        .plugin(name: "PerceptionMacros", package: "swift-perception"),
       ]
     ),
   ],
