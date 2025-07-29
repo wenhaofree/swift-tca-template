@@ -8,16 +8,24 @@
 
 ### 环境要求
 - **iOS**: 15.0+
-- **Xcode**: 15.0+
-- **Swift**: 5.9+
-- **macOS**: 13.0+
+- **Xcode**: 16.0+
+- **Swift**: 6.0+
+- **macOS**: 12.0+
 
 ### 技术亮点
-* **Swift 5.9+** 使用最新语言特性
-* **iOS 15.0+** 最低部署目标（已更新兼容性）
+* **Swift 6.0+** 使用最新语言特性
+* **iOS 15.0+** 最低部署目标
 * **SwiftUI 优先** 使用现代导航 API
 * **全面测试** 使用 XCTest 和 TCA TestStore
 * **模块化包结构** 支持独立功能开发
+
+### 主要依赖
+* **[swift-composable-architecture](https://github.com/pointfreeco/swift-composable-architecture)**: `1.20.2`
+* **[swift-dependencies](https://github.com/pointfreeco/swift-dependencies)**: `1.9.2`
+* **[swift-navigation](https://github.com/pointfreeco/swift-navigation)**: `2.3.2`
+* **[swift-case-paths](https://github.com/pointfreeco/swift-case-paths)**: `1.7.1`
+* **[swift-collections](https://github.com/apple/swift-collections)**: `1.2.1`
+* **[swift-perception](https://github.com/pointfreeco/swift-perception)**: `1.6.0`
 
 ## 📁 项目结构
 
