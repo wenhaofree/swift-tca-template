@@ -50,6 +50,9 @@ let package = Package(
         "ProfileCore",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("StrictConcurrency")
       ]
     ),
     .testTarget(
@@ -74,6 +77,9 @@ let package = Package(
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "DependenciesMacros", package: "swift-dependencies"),
         .product(name: "Perception", package: "swift-perception"),
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("StrictConcurrency")
       ]
     ),
     .target(
@@ -98,6 +104,9 @@ let package = Package(
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "DependenciesMacros", package: "swift-dependencies"),
         .product(name: "Perception", package: "swift-perception"),
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("StrictConcurrency")
       ]
     ),
     .target(
@@ -112,6 +121,9 @@ let package = Package(
         "TwoFactorCore",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("StrictConcurrency")
       ]
     ),
     .testTarget(
@@ -134,6 +146,9 @@ let package = Package(
         "NetworkClient",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("StrictConcurrency")
       ]
     ),
     .testTarget(
@@ -154,6 +169,9 @@ let package = Package(
         "AuthenticationClient",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("StrictConcurrency")
       ]
     ),
     .testTarget(
@@ -174,6 +192,9 @@ let package = Package(
         "AuthenticationClient",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
         .product(name: "Perception", package: "swift-perception"),
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("StrictConcurrency")
       ]
     ),
     .testTarget(
