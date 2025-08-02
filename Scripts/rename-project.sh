@@ -49,7 +49,7 @@ OLD_BUNDLE_ID="com.example.tca-template"
 
 # Define new names
 NEW_APP_NAME="${NEW_PROJECT_NAME}App"
-NEW_BUNDLE_ID="com.example.${NEW_PROJECT_NAME,,}" # Convert to lowercase
+NEW_BUNDLE_ID="com.example.$(echo $NEW_PROJECT_NAME | tr '[:upper:]' '[:lower:]')" # Convert to lowercase
 
 # Define paths
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

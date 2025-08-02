@@ -6,7 +6,7 @@ import ComposableArchitecture
 import SwiftUI
 
 private let readMe = """
-  Welcome to the TCA Template - a comprehensive starter template for building iOS applications \
+  Welcome to the ShipSaasSwift - a comprehensive starter template for building iOS applications \
   using Swift Composable Architecture.
 
   This template includes:
@@ -40,7 +40,7 @@ struct RootView: View {
         VStack(alignment: .leading, spacing: 24) {
           // Header
           VStack(alignment: .leading, spacing: 8) {
-            Text("TCA Template")
+            Text("ShipSaasSwift")
               .font(.largeTitle)
               .fontWeight(.bold)
 
@@ -105,7 +105,7 @@ struct RootView: View {
       .sheet(isPresented: $showApp) {
         AppView(store: store)
       }
-      .navigationTitle("TCA Template")
+      .navigationTitle("ShipSaasSwift")
       .navigationBarTitleDisplayMode(.inline)
     }
   }

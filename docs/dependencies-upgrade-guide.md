@@ -27,7 +27,7 @@
 
 ### 2. 更新依赖
 ```bash
-cd tca-template
+cd ShipSaasSwift
 swift package update
 ```
 

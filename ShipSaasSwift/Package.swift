@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "tca-template",
+  name: "ShipSaasSwift",
   platforms: [
     .iOS(.v15),
     .macOS(.v12),

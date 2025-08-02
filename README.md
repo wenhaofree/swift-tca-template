@@ -1,4 +1,4 @@
-# TCA Template
+# ShipSaasSwift
 
 A comprehensive iOS application template built with [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture).
 
@@ -28,12 +28,12 @@ This template provides a complete, production-ready foundation for building iOS 
 ## 📁 Project Structure
 
 ```
-tca-template/
+ShipSaasSwift/
 ├── 📱 App/                          # iOS application entry point
-│   ├── TcaTemplateApp.swift         # Main app entry
+│   ├── ShipSaasSwiftApp.swift         # Main app entry
 │   ├── RootView.swift               # Root view
 │   └── Assets.xcassets              # App assets
-├── 📦 tca-template/                 # Swift Package modules
+├── 📦 ShipSaasSwift/                 # Swift Package modules
 │   ├── Package.swift               # Package configuration
 │   ├── Sources/                     # Source code modules
 │   │   ├── AppCore/                 # App core logic
@@ -66,7 +66,7 @@ tca-template/
 │   ├── architecture.md             # Architecture guide
 │   ├── feature-development.md      # Feature development guide
 │   └── 系统说明.md                  # Chinese documentation
-├── 🔧 tca-template.xcodeproj        # Xcode project file
+├── 🔧 ShipSaasSwift.xcodeproj        # Xcode project file
 └── 📖 README.md                     # Project documentation
 ```
 
@@ -81,7 +81,7 @@ tca-template/
 ### 1. Clone and Setup
 ```bash
 git clone <repository-url>
-cd tca-template
+cd ShipSaasSwift
 ```
 
 ### 2. Setup Development Environment
@@ -93,16 +93,16 @@ chmod +x Scripts/setup-dev.sh
 ### 3. Build Project
 ```bash
 # Using Swift Package Manager
-cd tca-template
+cd ShipSaasSwift
 swift build
 swift test
 
 # Or open Xcode project
-open tca-template.xcodeproj
+open ShipSaasSwift.xcodeproj
 ```
 
 ### 4. Run Application
-- Select `tca-template` scheme
+- Select `ShipSaasSwift` scheme
 - Choose target device/simulator
 - Press `Cmd+R` to build and run
 

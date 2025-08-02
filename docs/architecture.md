@@ -1,6 +1,6 @@
-# TCA Template Architecture Guide
+# ShipSaasSwift Architecture Guide
 
-This document provides a comprehensive overview of the TCA Template architecture, design patterns, and best practices.
+This document provides a comprehensive overview of the ShipSaasSwift architecture, design patterns, and best practices.
 
 ## 📋 Table of Contents
 
@@ -14,7 +14,7 @@ This document provides a comprehensive overview of the TCA Template architecture
 
 ## Overview
 
-The TCA Template follows the **Swift Composable Architecture (TCA)** pattern, which provides a consistent and predictable way to build applications. The architecture emphasizes:
+The ShipSaasSwift follows the **Swift Composable Architecture (TCA)** pattern, which provides a consistent and predictable way to build applications. The architecture emphasizes:
 
 - **Unidirectional data flow**
 - **Immutable state management**
@@ -341,7 +341,7 @@ return .run { send in
 
 ## Conclusion
 
-The TCA Template architecture provides a solid foundation for building scalable, testable, and maintainable iOS applications. By following these patterns and best practices, you can create applications that are easy to understand, modify, and extend.
+The ShipSaasSwift architecture provides a solid foundation for building scalable, testable, and maintainable iOS applications. By following these patterns and best practices, you can create applications that are easy to understand, modify, and extend.
 
 For more detailed information, refer to:
 - [TCA Official Documentation](https://pointfreeco.github.io/swift-composable-architecture/)

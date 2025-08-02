@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct TcaTemplateApp: App {
+struct ShipSaasSwiftApp: App {
   var body: some Scene {
     WindowGroup {
       RootView()

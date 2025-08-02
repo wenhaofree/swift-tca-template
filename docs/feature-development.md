@@ -1,6 +1,6 @@
 # Feature Development Guide
 
-This guide walks you through developing new features in the TCA Template, from initial planning to implementation and testing.
+This guide walks you through developing new features in the ShipSaasSwift, from initial planning to implementation and testing.
 
 ## 📋 Table of Contents
 
@@ -484,7 +484,7 @@ Create previews for all states:
 
 ## Conclusion
 
-Following this guide will help you create well-structured, testable features that integrate seamlessly with the TCA Template architecture. Remember to:
+Following this guide will help you create well-structured, testable features that integrate seamlessly with the ShipSaasSwift architecture. Remember to:
 
 - Plan before coding
 - Start simple and iterate
